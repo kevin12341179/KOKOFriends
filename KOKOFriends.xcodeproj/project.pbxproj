@@ -17,6 +17,9 @@
 		71DC84062A1F492F0001AD72 /* KOKOFriendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC84052A1F492F0001AD72 /* KOKOFriendsUITests.swift */; };
 		71DC84082A1F492F0001AD72 /* KOKOFriendsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC84072A1F492F0001AD72 /* KOKOFriendsUITestsLaunchTests.swift */; };
 		71DC85502A1F5E3D0001AD72 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC854F2A1F5E3D0001AD72 /* TabBarController.swift */; };
+		852A31252A1F90190080ADA2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31242A1F90190080ADA2 /* NavigationController.swift */; };
+		852A31282A1F96DD0080ADA2 /* EX+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31272A1F96DD0080ADA2 /* EX+TabBarController.swift */; };
+		852A312A2A1F973F0080ADA2 /* EX+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31292A1F973F0080ADA2 /* EX+NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		71DC84052A1F492F0001AD72 /* KOKOFriendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOKOFriendsUITests.swift; sourceTree = "<group>"; };
 		71DC84072A1F492F0001AD72 /* KOKOFriendsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOKOFriendsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		71DC854F2A1F5E3D0001AD72 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		852A31242A1F90190080ADA2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		852A31272A1F96DD0080ADA2 /* EX+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+TabBarController.swift"; sourceTree = "<group>"; };
+		852A31292A1F973F0080ADA2 /* EX+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+NavigationController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +110,12 @@
 				71DC83E42A1F492C0001AD72 /* AppDelegate.swift */,
 				71DC83E62A1F492C0001AD72 /* SceneDelegate.swift */,
 				71DC83E82A1F492C0001AD72 /* ViewController.swift */,
+				852A31242A1F90190080ADA2 /* NavigationController.swift */,
 				71DC854F2A1F5E3D0001AD72 /* TabBarController.swift */,
 				71DC83EA2A1F492C0001AD72 /* Main.storyboard */,
 				71DC83ED2A1F492F0001AD72 /* Assets.xcassets */,
 				71DC83EF2A1F492F0001AD72 /* LaunchScreen.storyboard */,
+				852A31262A1F96B90080ADA2 /* Extension */,
 				71DC83F22A1F492F0001AD72 /* Info.plist */,
 			);
 			path = KOKOFriends;
@@ -128,6 +136,15 @@
 				71DC84072A1F492F0001AD72 /* KOKOFriendsUITestsLaunchTests.swift */,
 			);
 			path = KOKOFriendsUITests;
+			sourceTree = "<group>";
+		};
+		852A31262A1F96B90080ADA2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				852A31292A1F973F0080ADA2 /* EX+NavigationController.swift */,
+				852A31272A1F96DD0080ADA2 /* EX+TabBarController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +280,9 @@
 			files = (
 				71DC83E92A1F492C0001AD72 /* ViewController.swift in Sources */,
 				71DC85502A1F5E3D0001AD72 /* TabBarController.swift in Sources */,
+				852A31252A1F90190080ADA2 /* NavigationController.swift in Sources */,
+				852A31282A1F96DD0080ADA2 /* EX+TabBarController.swift in Sources */,
+				852A312A2A1F973F0080ADA2 /* EX+NavigationController.swift in Sources */,
 				71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */,
 				71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */,
 			);
@@ -451,6 +471,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,6 +501,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

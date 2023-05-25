@@ -11,15 +11,14 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setBackgroundColor(.white)
         
         let viewController1 = UIViewController()
         let viewController2 = UIViewController()
+        viewController2.view.backgroundColor = .white
         let viewController3 = UIViewController()
         let viewController4 = UIViewController()
         let viewController5 = UIViewController()
-        
-        self.tabBar.barTintColor = UIColor.white
-        self.tabBar.isTranslucent = false
 
         viewController1.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarProductsOff")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarProductsOff")?.withRenderingMode(.alwaysOriginal))
         viewController2.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarFriendsOn")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarFriendsOn")?.withRenderingMode(.alwaysOriginal))
