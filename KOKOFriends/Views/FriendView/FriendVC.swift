@@ -11,6 +11,7 @@ import Combine
 class FriendVC: UIViewController {
     
     @IBOutlet weak var userView: UserView!
+    @IBOutlet weak var frinedContentView: FriendContentView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "FriendVC", bundle: Bundle.main)

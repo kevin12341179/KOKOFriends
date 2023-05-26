@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendVC" customModule="KOKOFriends" customModuleProvider="target">
             <connections>
+                <outlet property="frinedContentView" destination="CFA-y3-MtD" id="eY7-li-3Uh"/>
                 <outlet property="userView" destination="z6W-Wr-ZAj" id="rGD-f2-YW7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,20 +21,37 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6W-Wr-ZAj" customClass="UserView" customModule="KOKOFriends" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="114"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="114" id="r5B-o4-4vf"/>
-                    </constraints>
-                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljM-in-Ias">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6W-Wr-ZAj" customClass="UserView" customModule="KOKOFriends" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="114" id="r5B-o4-4vf"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynz-ir-tLq">
+                            <rect key="frame" x="0.0" y="114" width="414" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="Dia-hH-zZm"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-y3-MtD" customClass="FriendContentView" customModule="KOKOFriends" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="114" width="414" height="704"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="z6W-Wr-ZAj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="g1Y-d7-CcW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z6W-Wr-ZAj" secondAttribute="trailing" id="g8S-A1-FT3"/>
-                <constraint firstItem="z6W-Wr-ZAj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hjB-Jr-xF0"/>
+                <constraint firstItem="ljM-in-Ias" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3GU-zQ-NCs"/>
+                <constraint firstItem="ljM-in-Ias" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="PTu-vJ-fPs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ljM-in-Ias" secondAttribute="bottom" id="in4-hV-3XZ"/>
+                <constraint firstItem="ljM-in-Ias" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tqr-hQ-O1q"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="154"/>
