@@ -13,6 +13,14 @@
 		712DE7AA2A204E3E0084B03B /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7A92A204E3E0084B03B /* UserView.swift */; };
 		712DE7AC2A204E600084B03B /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712DE7AB2A204E600084B03B /* UserView.xib */; };
 		712DE7AE2A204E8A0084B03B /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7AD2A204E8A0084B03B /* NibLoadable.swift */; };
+		712DE7B32A2055C90084B03B /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7B22A2055C90084B03B /* APIResponse.swift */; };
+		712DE7B52A2056200084B03B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7B42A2056200084B03B /* APIManager.swift */; };
+		712DE7B72A2056980084B03B /* APIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7B62A2056980084B03B /* APIInfo.swift */; };
+		712DE7B92A20573D0084B03B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7B82A20573D0084B03B /* UserRepository.swift */; };
+		712DE7BB2A20574F0084B03B /* FriendsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7BA2A20574F0084B03B /* FriendsRepository.swift */; };
+		712DE7BD2A205A980084B03B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7BC2A205A980084B03B /* User.swift */; };
+		712DE7BF2A205AE20084B03B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7BE2A205AE20084B03B /* Friend.swift */; };
+		712DE7C12A2060660084B03B /* FriendVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7C02A2060660084B03B /* FriendVM.swift */; };
 		71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E42A1F492C0001AD72 /* AppDelegate.swift */; };
 		71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E62A1F492C0001AD72 /* SceneDelegate.swift */; };
 		71DC83E92A1F492C0001AD72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E82A1F492C0001AD72 /* ViewController.swift */; };
@@ -52,6 +60,14 @@
 		712DE7A92A204E3E0084B03B /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		712DE7AB2A204E600084B03B /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
 		712DE7AD2A204E8A0084B03B /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		712DE7B22A2055C90084B03B /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		712DE7B42A2056200084B03B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		712DE7B62A2056980084B03B /* APIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInfo.swift; sourceTree = "<group>"; };
+		712DE7B82A20573D0084B03B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		712DE7BA2A20574F0084B03B /* FriendsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRepository.swift; sourceTree = "<group>"; };
+		712DE7BC2A205A980084B03B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		712DE7BE2A205AE20084B03B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		712DE7C02A2060660084B03B /* FriendVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVM.swift; sourceTree = "<group>"; };
 		71DC83E12A1F492C0001AD72 /* KOKOFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKOFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DC83E42A1F492C0001AD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71DC83E62A1F492C0001AD72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +125,7 @@
 			children = (
 				712DE7A42A204CA70084B03B /* Component */,
 				712DE7A52A204CE60084B03B /* FriendVC.swift */,
+				712DE7C02A2060660084B03B /* FriendVM.swift */,
 				712DE7A62A204CE60084B03B /* FriendVC.xib */,
 			);
 			path = FriendView;
@@ -121,6 +138,36 @@
 				712DE7AB2A204E600084B03B /* UserView.xib */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		712DE7AF2A2055440084B03B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				712DE7B12A2055B70084B03B /* Response */,
+				712DE7B02A2055AB0084B03B /* Repository */,
+				712DE7B42A2056200084B03B /* APIManager.swift */,
+				712DE7B62A2056980084B03B /* APIInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		712DE7B02A2055AB0084B03B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				712DE7B82A20573D0084B03B /* UserRepository.swift */,
+				712DE7BA2A20574F0084B03B /* FriendsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		712DE7B12A2055B70084B03B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				712DE7B22A2055C90084B03B /* APIResponse.swift */,
+				712DE7BC2A205A980084B03B /* User.swift */,
+				712DE7BE2A205AE20084B03B /* Friend.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		71DC83D82A1F492C0001AD72 = {
@@ -155,6 +202,7 @@
 				71DC83ED2A1F492F0001AD72 /* Assets.xcassets */,
 				71DC83EF2A1F492F0001AD72 /* LaunchScreen.storyboard */,
 				712DE7A22A204C670084B03B /* Views */,
+				712DE7AF2A2055440084B03B /* Model */,
 				852A31262A1F96B90080ADA2 /* Extension */,
 				71DC83F22A1F492F0001AD72 /* Info.plist */,
 			);
@@ -327,10 +375,18 @@
 				712DE7AE2A204E8A0084B03B /* NibLoadable.swift in Sources */,
 				71DC83E92A1F492C0001AD72 /* ViewController.swift in Sources */,
 				71DC85502A1F5E3D0001AD72 /* TabBarController.swift in Sources */,
+				712DE7B92A20573D0084B03B /* UserRepository.swift in Sources */,
+				712DE7C12A2060660084B03B /* FriendVM.swift in Sources */,
+				712DE7B32A2055C90084B03B /* APIResponse.swift in Sources */,
+				712DE7BD2A205A980084B03B /* User.swift in Sources */,
+				712DE7B72A2056980084B03B /* APIInfo.swift in Sources */,
 				852A31252A1F90190080ADA2 /* NavigationController.swift in Sources */,
 				852A31282A1F96DD0080ADA2 /* EX+TabBarController.swift in Sources */,
+				712DE7BB2A20574F0084B03B /* FriendsRepository.swift in Sources */,
 				852A312A2A1F973F0080ADA2 /* EX+NavigationController.swift in Sources */,
 				712DE7AA2A204E3E0084B03B /* UserView.swift in Sources */,
+				712DE7B52A2056200084B03B /* APIManager.swift in Sources */,
+				712DE7BF2A205AE20084B03B /* Friend.swift in Sources */,
 				71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */,
 				71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */,
 			);

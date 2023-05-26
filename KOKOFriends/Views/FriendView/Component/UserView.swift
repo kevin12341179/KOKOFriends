@@ -10,6 +10,7 @@ import UIKit
 class UserView: UIView, NibOwnerLoadable {
 
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userID: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +21,8 @@ class UserView: UIView, NibOwnerLoadable {
         loadNibContent()
     }
     
-    func setUser(user: String){
-        userName.text = user
+    func setUser(user: User){
+        userName.text = user.name
+        userID.text = "KOKO ID : \(user.kokoid)"
     }
 }

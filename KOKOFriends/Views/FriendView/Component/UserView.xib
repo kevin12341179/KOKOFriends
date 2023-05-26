@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserView" customModule="KOKOFriends" customModuleProvider="target">
             <connections>
+                <outlet property="userID" destination="EVt-YM-bbn" id="iiv-u7-n3u"/>
                 <outlet property="userName" destination="YO3-dx-xw1" id="itP-eA-KOr"/>
             </connections>
         </placeholder>
