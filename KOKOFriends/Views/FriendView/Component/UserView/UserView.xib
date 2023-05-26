@@ -27,11 +27,11 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO3-dx-xw1">
-                    <rect key="frame" x="30" y="35" width="45" height="18"/>
+                    <rect key="frame" x="30" y="35" width="42.5" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="n0a-Y7-YYQ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -72,6 +72,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="D5u-Mk-4dP" firstAttribute="top" secondItem="YO3-dx-xw1" secondAttribute="bottom" constant="8" id="9ak-zk-CAu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LIZ-0h-nV5" secondAttribute="trailing" constant="30" id="EDC-0n-keK"/>

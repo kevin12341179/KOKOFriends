@@ -17,5 +17,6 @@ class FrinedContentCell: UICollectionViewCell {
     
     func setSelect(isSelect: Bool){
         selectView.isHidden = !isSelect
+        self.title.font = isSelect ? UIFont.systemFont(ofSize: 13, weight: .medium) : UIFont.systemFont(ofSize: 13, weight: .regular)
     }
 }
