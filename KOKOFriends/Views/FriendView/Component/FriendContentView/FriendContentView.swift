@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FriendContentDelegate: AnyObject {
+    func getFriendList(type: getFriendListType)
+}
+
 enum FriendContent: String{
     case Friend = "好友"
     case Talk = "聊天"
@@ -16,8 +20,11 @@ class FriendContentView: UIView, NibOwnerLoadable {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var noDataView: UIView!
     
+    weak var delegate: FriendContentDelegate?
+    
     let contents: [FriendContent] = [.Friend, .Talk]
     var select: FriendContent = .Friend
+    var friendData: [Friend] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,6 +43,15 @@ class FriendContentView: UIView, NibOwnerLoadable {
         self.collectionView.register(UINib(nibName:
                                             "FrinedContentCell", bundle:nil),
                                      forCellWithReuseIdentifier: "cell")
+    }
+    
+    func setData(friendData: [Friend]){
+        self.friendData = friendData
+        self.noDataView.isHidden = self.friendData.count > 0
+    }
+    
+    @IBAction func addFriendClick(_ sender: Any) {
+        self.delegate?.getFriendList(type: .One)
     }
 }
 

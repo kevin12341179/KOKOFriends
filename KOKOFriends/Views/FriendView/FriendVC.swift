@@ -29,6 +29,8 @@ class FriendVC: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.rgbaColor(r: 252, g: 252, b: 252)
         
+        frinedContentView.delegate = self
+        
         bindViewModel()
     }
     
@@ -40,5 +42,19 @@ class FriendVC: UIViewController {
             }
             .store(in: &cancellable)
         viewModel.getUser()
+        
+        viewModel.friendListPublisher
+            .receive(on: DispatchQueue.main)
+            .sink {[weak self] data in
+                self?.frinedContentView.setData(friendData: data)
+            }
+            .store(in: &cancellable)
+        viewModel.getFriendList(type: .Four)
+    }
+}
+
+extension FriendVC: FriendContentDelegate {
+    func getFriendList(type: getFriendListType) {
+        self.viewModel.getFriendList(type: type)
     }
 }
