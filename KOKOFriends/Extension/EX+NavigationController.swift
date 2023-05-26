@@ -8,6 +8,22 @@
 import UIKit
 
 extension UINavigationController {
+    func setbackgroundColor(color: UIColor){
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = color
+            appearance.shadowImage = UIImage()
+            appearance.shadowColor = .clear
+            
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        } else {
+            UINavigationBar.appearance().barTintColor = color
+            UINavigationBar.appearance().shadowImage = UIImage()
+        }
+    }
+    
     func setLeftButton(){
         let atmBtn = UIButton()
         atmBtn.setImage(UIImage(named: "icNavPinkWithdraw"), for: .normal)
