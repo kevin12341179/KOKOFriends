@@ -11,12 +11,14 @@ protocol FriendTableViewDelegate: AnyObject {
 }
 
 protocol FriendTableViewInterFace {
+    func setDelegate(delegate: FriendTableViewDelegate)
     func setFriendData(data: [Friend])
 }
 
 class FriendTableView: UIView, NibOwnerLoadable{
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    weak var delegate: FriendTableViewDelegate?
     
     var tableviewData: [Friend] = []
     
@@ -39,9 +41,11 @@ class FriendTableView: UIView, NibOwnerLoadable{
 }
 
 extension FriendTableView: FriendTableViewInterFace {
+    func setDelegate(delegate: FriendTableViewDelegate) {
+        self.delegate = delegate
+    }
+    
     func setFriendData(data: [Friend]) {
-        
-        
         self.tableviewData = data
         self.tableView.reloadData()
     }
@@ -59,8 +63,4 @@ extension FriendTableView: UITableViewDelegate, UITableViewDataSource{
         }
         return UITableViewCell()
     }
-}
-
-extension FriendTableView: FriendTableViewDelegate{
-    
 }

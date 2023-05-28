@@ -44,6 +44,10 @@ class FriendContentView: UIView, NibOwnerLoadable {
         self.collectionView.register(UINib(nibName:
                                             "FrinedContentCell", bundle:nil),
                                      forCellWithReuseIdentifier: "cell")
+        
+        if let friendTBV = contentViews[0] as? FriendTableViewInterFace {
+            friendTBV.setDelegate(delegate: self)
+        }
     }
     
     func setData(friendData: [Friend]){
@@ -90,4 +94,8 @@ extension FriendContentView: UICollectionViewDelegate, UICollectionViewDataSourc
         select = contents[indexPath.row]
         collectionView.reloadData()
     }
+}
+
+extension FriendContentView: FriendTableViewDelegate{
+    
 }
