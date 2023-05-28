@@ -14,12 +14,6 @@ class GradientView: UIView {
         }
     }
     
-    @IBInspectable var cornerRadius: Int = 0 {
-        didSet{
-            gradientLayer.cornerRadius = CGFloat(cornerRadius)
-        }
-    }
-    
     @IBInspectable var startColor:UIColor = .white {
         didSet{
             var colors = self.colors

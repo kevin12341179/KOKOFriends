@@ -19,6 +19,7 @@ enum FriendContent: String{
 class FriendContentView: UIView, NibOwnerLoadable {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var noDataView: UIView!
+    @IBOutlet var contentViews: [UIView]!
     
     weak var delegate: FriendContentDelegate?
     
@@ -48,6 +49,10 @@ class FriendContentView: UIView, NibOwnerLoadable {
     func setData(friendData: [Friend]){
         self.friendData = friendData
         self.noDataView.isHidden = self.friendData.count > 0
+        
+        if let friendTBV = contentViews[0] as? FriendTableViewInterFace {
+            friendTBV.setFriendData(data: friendData)
+        }
     }
     
     @IBAction func addFriendClick(_ sender: Any) {

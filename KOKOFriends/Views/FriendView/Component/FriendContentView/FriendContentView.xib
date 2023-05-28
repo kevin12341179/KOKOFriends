@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="24i-oA-wO9" id="jE0-SY-lji"/>
                 <outlet property="noDataView" destination="oyQ-4w-1vu" id="BrC-BT-CLY"/>
+                <outletCollection property="contentViews" destination="nv3-xq-KBj" collectionClass="NSMutableArray" id="ZSE-Oj-dD6"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -52,7 +53,19 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-ow-Mj7" userLabel="Content">
                     <rect key="frame" x="0.0" y="36" width="414" height="826"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-xq-KBj" customClass="FriendTableView" customModule="KOKOFriends" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="826"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nv3-xq-KBj" firstAttribute="top" secondItem="7Rg-ow-Mj7" secondAttribute="top" id="C12-cQ-y8x"/>
+                        <constraint firstAttribute="trailing" secondItem="nv3-xq-KBj" secondAttribute="trailing" id="HzV-4n-3S3"/>
+                        <constraint firstAttribute="bottom" secondItem="nv3-xq-KBj" secondAttribute="bottom" id="SLY-Br-Ldy"/>
+                        <constraint firstItem="nv3-xq-KBj" firstAttribute="leading" secondItem="7Rg-ow-Mj7" secondAttribute="leading" id="uMH-zF-tGg"/>
+                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyQ-4w-1vu" userLabel="NoDataView">
                     <rect key="frame" x="0.0" y="36" width="414" height="860"/>
@@ -150,7 +163,7 @@
                                                             <color key="value" red="0.65098039215686276" green="0.80000000000000004" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <integer key="value" value="20"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>

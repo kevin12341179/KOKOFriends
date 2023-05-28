@@ -39,6 +39,11 @@
 		852A31252A1F90190080ADA2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31242A1F90190080ADA2 /* NavigationController.swift */; };
 		852A31282A1F96DD0080ADA2 /* EX+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31272A1F96DD0080ADA2 /* EX+TabBarController.swift */; };
 		852A312A2A1F973F0080ADA2 /* EX+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31292A1F973F0080ADA2 /* EX+NavigationController.swift */; };
+		852A312D2A23431C0080ADA2 /* FriendTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A312C2A23431C0080ADA2 /* FriendTableView.swift */; };
+		852A312F2A2343360080ADA2 /* FriendTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852A312E2A2343360080ADA2 /* FriendTableView.xib */; };
+		852A31332A2346090080ADA2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31312A2346090080ADA2 /* FriendTableViewCell.swift */; };
+		852A31342A2346090080ADA2 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 852A31322A2346090080ADA2 /* FriendTableViewCell.xib */; };
+		852A31362A23485B0080ADA2 /* EX+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852A31352A23485B0080ADA2 /* EX+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		852A31242A1F90190080ADA2 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		852A31272A1F96DD0080ADA2 /* EX+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+TabBarController.swift"; sourceTree = "<group>"; };
 		852A31292A1F973F0080ADA2 /* EX+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+NavigationController.swift"; sourceTree = "<group>"; };
+		852A312C2A23431C0080ADA2 /* FriendTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableView.swift; sourceTree = "<group>"; };
+		852A312E2A2343360080ADA2 /* FriendTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableView.xib; sourceTree = "<group>"; };
+		852A31312A2346090080ADA2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		852A31322A2346090080ADA2 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		852A31352A23485B0080ADA2 /* EX+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +203,7 @@
 		712DE7C32A207FFD0084B03B /* FriendContentView */ = {
 			isa = PBXGroup;
 			children = (
+				852A312B2A2342FC0080ADA2 /* FriendTableView */,
 				712DE7C82A2088960084B03B /* FrinedContentCell */,
 				712DE7C42A2080560084B03B /* FriendContentView.swift */,
 				712DE7C62A20869B0084B03B /* FriendContentView.xib */,
@@ -280,8 +291,28 @@
 				852A31272A1F96DD0080ADA2 /* EX+TabBarController.swift */,
 				712DE7A02A2047940084B03B /* EX+Color.swift */,
 				712DE7AD2A204E8A0084B03B /* NibLoadable.swift */,
+				852A31352A23485B0080ADA2 /* EX+UIView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		852A312B2A2342FC0080ADA2 /* FriendTableView */ = {
+			isa = PBXGroup;
+			children = (
+				852A31302A2345E30080ADA2 /* FriendTableViewCell */,
+				852A312C2A23431C0080ADA2 /* FriendTableView.swift */,
+				852A312E2A2343360080ADA2 /* FriendTableView.xib */,
+			);
+			path = FriendTableView;
+			sourceTree = "<group>";
+		};
+		852A31302A2345E30080ADA2 /* FriendTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				852A31312A2346090080ADA2 /* FriendTableViewCell.swift */,
+				852A31322A2346090080ADA2 /* FriendTableViewCell.xib */,
+			);
+			path = FriendTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +426,8 @@
 				712DE7CC2A2089090084B03B /* FrinedContentCell.xib in Resources */,
 				71DC83EC2A1F492C0001AD72 /* Main.storyboard in Resources */,
 				712DE7AC2A204E600084B03B /* UserView.xib in Resources */,
+				852A31342A2346090080ADA2 /* FriendTableViewCell.xib in Resources */,
+				852A312F2A2343360080ADA2 /* FriendTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +456,7 @@
 				712DE7A72A204CE60084B03B /* FriendVC.swift in Sources */,
 				712DE7AE2A204E8A0084B03B /* NibLoadable.swift in Sources */,
 				71DC83E92A1F492C0001AD72 /* ViewController.swift in Sources */,
+				852A31362A23485B0080ADA2 /* EX+UIView.swift in Sources */,
 				712DE7CA2A2088DB0084B03B /* FrinedContentCell.swift in Sources */,
 				71DC85502A1F5E3D0001AD72 /* TabBarController.swift in Sources */,
 				71CC7B0F2A209FC900662005 /* GradientView.swift in Sources */,
@@ -433,6 +467,8 @@
 				712DE7B72A2056980084B03B /* APIInfo.swift in Sources */,
 				852A31252A1F90190080ADA2 /* NavigationController.swift in Sources */,
 				852A31282A1F96DD0080ADA2 /* EX+TabBarController.swift in Sources */,
+				852A312D2A23431C0080ADA2 /* FriendTableView.swift in Sources */,
+				852A31332A2346090080ADA2 /* FriendTableViewCell.swift in Sources */,
 				712DE7BB2A20574F0084B03B /* FriendsRepository.swift in Sources */,
 				852A312A2A1F973F0080ADA2 /* EX+NavigationController.swift in Sources */,
 				712DE7AA2A204E3E0084B03B /* UserView.swift in Sources */,
