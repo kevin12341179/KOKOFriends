@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         viewController1.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarProductsOff")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarProductsOff")?.withRenderingMode(.alwaysOriginal))
         viewController2.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarFriendsOn")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarFriendsOn")?.withRenderingMode(.alwaysOriginal))
         viewController3.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarHomeOff")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarHomeOff")?.withRenderingMode(.alwaysOriginal))
-        viewController3.tabBarItem.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 0, right: 0)
+        viewController3.tabBarItem.imageInsets = UIEdgeInsets(top: -9, left: 0, bottom: 0, right: 0)
         viewController4.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarManageOff")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarManageOff")?.withRenderingMode(.alwaysOriginal))
         viewController5.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "icTabbarSettingOff")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "icTabbarSettingOff")?.withRenderingMode(.alwaysOriginal))
         

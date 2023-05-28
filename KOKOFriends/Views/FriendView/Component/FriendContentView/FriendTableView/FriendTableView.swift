@@ -40,6 +40,8 @@ class FriendTableView: UIView, NibOwnerLoadable{
 
 extension FriendTableView: FriendTableViewInterFace {
     func setFriendData(data: [Friend]) {
+        
+        
         self.tableviewData = data
         self.tableView.reloadData()
     }
