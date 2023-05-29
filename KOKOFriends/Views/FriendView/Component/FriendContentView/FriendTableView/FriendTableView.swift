@@ -22,7 +22,7 @@ class FriendTableView: UIView, NibOwnerLoadable{
     
     weak var delegate: FriendTableViewDelegate?
     
-    var getFriendListType: GetFriendListType = .One
+    var getFriendListType: GetFriendListType = .Four
     var refreshControl: UIRefreshControl = UIRefreshControl()
     var tableviewData: [Friend] = []
     var showData: [Friend] = []
@@ -69,8 +69,8 @@ extension FriendTableView: FriendTableViewInterFace {
     func setFriendData(data: [Friend], getFriendListType: GetFriendListType) {
         self.getFriendListType = getFriendListType
         self.tableviewData = data
-        self._checkSearch(textField: textField)
         self.refreshControl.endRefreshing()
+        self._checkSearch(textField: textField)
     }
 }
 

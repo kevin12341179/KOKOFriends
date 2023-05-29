@@ -30,7 +30,7 @@ class FrinedVM: FrinedVMInterFace {
     @Published private var _user: User = User.defaultUser
     var userPublisher: Published<User>.Publisher { $_user }
     // Friend
-    @Published private var _friendList: ([Friend], GetFriendListType) = ([], .One)
+    @Published private var _friendList: ([Friend], GetFriendListType) = ([], .Four)
     var friendListPublisher: Published<([Friend], GetFriendListType)>.Publisher { $_friendList }
     
     private let userRepository: UserRepositoryInterFace

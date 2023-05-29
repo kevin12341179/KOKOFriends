@@ -25,9 +25,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="24i-oA-wO9">
-                            <rect key="frame" x="35" y="0.0" width="379" height="35"/>
+                            <rect key="frame" x="32" y="0.0" width="382" height="35"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LPn-Q9-abI">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LPn-Q9-abI">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -40,7 +40,7 @@
                         <constraint firstItem="24i-oA-wO9" firstAttribute="top" secondItem="jez-Pq-zFc" secondAttribute="top" id="1jO-fj-wjw"/>
                         <constraint firstAttribute="bottom" secondItem="24i-oA-wO9" secondAttribute="bottom" id="3Nh-a6-rCQ"/>
                         <constraint firstAttribute="height" constant="35" id="8lz-35-T8O"/>
-                        <constraint firstItem="24i-oA-wO9" firstAttribute="leading" secondItem="jez-Pq-zFc" secondAttribute="leading" constant="35" id="L5T-oh-Mx6"/>
+                        <constraint firstItem="24i-oA-wO9" firstAttribute="leading" secondItem="jez-Pq-zFc" secondAttribute="leading" constant="32" id="L5T-oh-Mx6"/>
                         <constraint firstAttribute="trailing" secondItem="24i-oA-wO9" secondAttribute="trailing" id="YCw-Vl-XDG"/>
                     </constraints>
                 </view>

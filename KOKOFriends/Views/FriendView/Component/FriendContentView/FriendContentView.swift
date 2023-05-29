@@ -26,6 +26,7 @@ class FriendContentView: UIView, NibOwnerLoadable {
     let contents: [FriendContent] = [.Friend, .Talk]
     var select: FriendContent = .Friend
     var friendData: [Friend] = []
+    var getFriendListType: GetFriendListType = .Four
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,10 +54,12 @@ class FriendContentView: UIView, NibOwnerLoadable {
     func setData(friendData: [Friend], getFriendListType: GetFriendListType){
         self.friendData = friendData
         self.noDataView.isHidden = self.friendData.count > 0
+        self.getFriendListType = getFriendListType
         
         if let friendTBV = contentViews[0] as? FriendTableViewInterFace {
             friendTBV.setFriendData(data: friendData, getFriendListType: getFriendListType)
         }
+        self.collectionView.reloadData()
     }
     
     @IBAction func addFriendClick(_ sender: Any) {
@@ -70,7 +73,7 @@ extension FriendContentView: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:50, height:self.collectionView.bounds.size.height)
+        return CGSize(width: 62, height:self.collectionView.bounds.size.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -85,6 +88,17 @@ extension FriendContentView: UICollectionViewDelegate, UICollectionViewDataSourc
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? FrinedContentCell {
             cell.setSelect(isSelect: select == contents[indexPath.row])
             cell.setTitle(title: contents[indexPath.row].rawValue)
+            
+            switch indexPath.row {
+            case 0:
+                let numArray = friendData.filter { f in
+                    return f.status == 2
+                }
+                cell.setNumber(num: numArray.count)
+            default:
+                cell.setNumber(num: getFriendListType == .Four ? 0 : 99)
+            }
+            
             return cell
         }
         return UICollectionViewCell()
