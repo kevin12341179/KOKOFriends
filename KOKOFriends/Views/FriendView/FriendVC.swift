@@ -12,6 +12,8 @@ class FriendVC: UIViewController {
     
     @IBOutlet weak var userView: UserView!
     @IBOutlet weak var frinedContentView: FriendContentView!
+    @IBOutlet weak var addFriendView: AddFriendView!
+    @IBOutlet weak var addFriendViewHeight: NSLayoutConstraint!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "FriendVC", bundle: Bundle.main)
@@ -30,6 +32,7 @@ class FriendVC: UIViewController {
         self.view.backgroundColor = UIColor.rgbaColor(r: 252, g: 252, b: 252)
         
         frinedContentView.delegate = self
+        addFriendView.delegate = self
         
         bindViewModel()
     }
@@ -56,5 +59,11 @@ class FriendVC: UIViewController {
 extension FriendVC: FriendContentDelegate {
     func getFriendList(type: GetFriendListType) {
         self.viewModel.getFriendList(type: type)
+    }
+}
+
+extension FriendVC: AddFriendViewDelegate {
+    func setExpand(isExpand: Bool) {
+        self.addFriendViewHeight.constant = isExpand ? 200 : 130
     }
 }

@@ -25,6 +25,10 @@
 		712DE7C72A20869B0084B03B /* FriendContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712DE7C62A20869B0084B03B /* FriendContentView.xib */; };
 		712DE7CA2A2088DB0084B03B /* FrinedContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7C92A2088DB0084B03B /* FrinedContentCell.swift */; };
 		712DE7CC2A2089090084B03B /* FrinedContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712DE7CB2A2089090084B03B /* FrinedContentCell.xib */; };
+		716D43572A248B2F0091E00C /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D43562A248B2F0091E00C /* AddFriendView.swift */; };
+		716D43592A248B380091E00C /* AddFriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716D43582A248B380091E00C /* AddFriendView.xib */; };
+		716D435C2A2497B10091E00C /* AddFriendSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716D435B2A2497B10091E00C /* AddFriendSection.xib */; };
+		716D435E2A2498260091E00C /* AddFriendSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D435D2A2498250091E00C /* AddFriendSection.swift */; };
 		71CC7B0F2A209FC900662005 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7B0E2A209FC900662005 /* GradientView.swift */; };
 		71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E42A1F492C0001AD72 /* AppDelegate.swift */; };
 		71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E62A1F492C0001AD72 /* SceneDelegate.swift */; };
@@ -82,6 +86,10 @@
 		712DE7C62A20869B0084B03B /* FriendContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendContentView.xib; sourceTree = "<group>"; };
 		712DE7C92A2088DB0084B03B /* FrinedContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrinedContentCell.swift; sourceTree = "<group>"; };
 		712DE7CB2A2089090084B03B /* FrinedContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrinedContentCell.xib; sourceTree = "<group>"; };
+		716D43562A248B2F0091E00C /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
+		716D43582A248B380091E00C /* AddFriendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendView.xib; sourceTree = "<group>"; };
+		716D435B2A2497B10091E00C /* AddFriendSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendSection.xib; sourceTree = "<group>"; };
+		716D435D2A2498250091E00C /* AddFriendSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendSection.swift; sourceTree = "<group>"; };
 		71CC7B0E2A209FC900662005 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		71DC83E12A1F492C0001AD72 /* KOKOFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKOFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DC83E42A1F492C0001AD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 		712DE7A42A204CA70084B03B /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				716D43542A248B020091E00C /* AddFriendView */,
 				712DE7C32A207FFD0084B03B /* FriendContentView */,
 				712DE7C22A207FF10084B03B /* UserView */,
 			);
@@ -218,6 +227,25 @@
 				712DE7CB2A2089090084B03B /* FrinedContentCell.xib */,
 			);
 			path = FrinedContentCell;
+			sourceTree = "<group>";
+		};
+		716D43542A248B020091E00C /* AddFriendView */ = {
+			isa = PBXGroup;
+			children = (
+				716D435A2A24978C0091E00C /* AddFriendSection */,
+				716D43562A248B2F0091E00C /* AddFriendView.swift */,
+				716D43582A248B380091E00C /* AddFriendView.xib */,
+			);
+			path = AddFriendView;
+			sourceTree = "<group>";
+		};
+		716D435A2A24978C0091E00C /* AddFriendSection */ = {
+			isa = PBXGroup;
+			children = (
+				716D435D2A2498250091E00C /* AddFriendSection.swift */,
+				716D435B2A2497B10091E00C /* AddFriendSection.xib */,
+			);
+			path = AddFriendSection;
 			sourceTree = "<group>";
 		};
 		71CC7B0D2A209FBB00662005 /* Base */ = {
@@ -425,8 +453,10 @@
 				712DE7A82A204CE60084B03B /* FriendVC.xib in Resources */,
 				712DE7CC2A2089090084B03B /* FrinedContentCell.xib in Resources */,
 				71DC83EC2A1F492C0001AD72 /* Main.storyboard in Resources */,
+				716D43592A248B380091E00C /* AddFriendView.xib in Resources */,
 				712DE7AC2A204E600084B03B /* UserView.xib in Resources */,
 				852A31342A2346090080ADA2 /* FriendTableViewCell.xib in Resources */,
+				716D435C2A2497B10091E00C /* AddFriendSection.xib in Resources */,
 				852A312F2A2343360080ADA2 /* FriendTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +486,7 @@
 				712DE7A72A204CE60084B03B /* FriendVC.swift in Sources */,
 				712DE7AE2A204E8A0084B03B /* NibLoadable.swift in Sources */,
 				71DC83E92A1F492C0001AD72 /* ViewController.swift in Sources */,
+				716D435E2A2498260091E00C /* AddFriendSection.swift in Sources */,
 				852A31362A23485B0080ADA2 /* EX+UIView.swift in Sources */,
 				712DE7CA2A2088DB0084B03B /* FrinedContentCell.swift in Sources */,
 				71DC85502A1F5E3D0001AD72 /* TabBarController.swift in Sources */,
@@ -476,6 +507,7 @@
 				712DE7C52A2080560084B03B /* FriendContentView.swift in Sources */,
 				712DE7BF2A205AE20084B03B /* Friend.swift in Sources */,
 				71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */,
+				716D43572A248B2F0091E00C /* AddFriendView.swift in Sources */,
 				71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

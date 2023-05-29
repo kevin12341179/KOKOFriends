@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendVC" customModule="KOKOFriends" customModuleProvider="target">
             <connections>
+                <outlet property="addFriendView" destination="Ynz-ir-tLq" id="7Vt-yG-iLo"/>
+                <outlet property="addFriendViewHeight" destination="Dia-hH-zZm" id="hJu-ac-oKz"/>
                 <outlet property="frinedContentView" destination="CFA-y3-MtD" id="eY7-li-3Uh"/>
                 <outlet property="userView" destination="z6W-Wr-ZAj" id="rGD-f2-YW7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,15 +33,15 @@
                                 <constraint firstAttribute="height" constant="114" id="r5B-o4-4vf"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynz-ir-tLq">
-                            <rect key="frame" x="0.0" y="114" width="414" height="200"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynz-ir-tLq" customClass="AddFriendView" customModule="KOKOFriends" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="114" width="414" height="130"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="200" id="Dia-hH-zZm"/>
+                                <constraint firstAttribute="height" constant="130" id="Dia-hH-zZm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-y3-MtD" customClass="FriendContentView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="114" width="414" height="704"/>
+                            <rect key="frame" x="0.0" y="244" width="414" height="574"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
