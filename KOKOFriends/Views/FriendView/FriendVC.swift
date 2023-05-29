@@ -45,8 +45,8 @@ class FriendVC: UIViewController {
         
         viewModel.friendListPublisher
             .receive(on: DispatchQueue.main)
-            .sink {[weak self] data in
-                self?.frinedContentView.setData(friendData: data)
+            .sink {[weak self] (data, type) in
+                self?.frinedContentView.setData(friendData: data, getFriendListType: type)
             }
             .store(in: &cancellable)
         viewModel.getFriendList(type: .Four)
@@ -54,7 +54,7 @@ class FriendVC: UIViewController {
 }
 
 extension FriendVC: FriendContentDelegate {
-    func getFriendList(type: getFriendListType) {
+    func getFriendList(type: GetFriendListType) {
         self.viewModel.getFriendList(type: type)
     }
 }

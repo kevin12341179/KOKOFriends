@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FriendContentDelegate: AnyObject {
-    func getFriendList(type: getFriendListType)
+    func getFriendList(type: GetFriendListType)
 }
 
 enum FriendContent: String{
@@ -50,12 +50,12 @@ class FriendContentView: UIView, NibOwnerLoadable {
         }
     }
     
-    func setData(friendData: [Friend]){
+    func setData(friendData: [Friend], getFriendListType: GetFriendListType){
         self.friendData = friendData
         self.noDataView.isHidden = self.friendData.count > 0
         
         if let friendTBV = contentViews[0] as? FriendTableViewInterFace {
-            friendTBV.setFriendData(data: friendData)
+            friendTBV.setFriendData(data: friendData, getFriendListType: getFriendListType)
         }
     }
     
@@ -97,5 +97,7 @@ extension FriendContentView: UICollectionViewDelegate, UICollectionViewDataSourc
 }
 
 extension FriendContentView: FriendTableViewDelegate{
-    
+    func getFriendList(type: GetFriendListType) {
+        self.delegate?.getFriendList(type: type)
+    }
 }

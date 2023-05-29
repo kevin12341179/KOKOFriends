@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-enum getFriendListType {
+enum GetFriendListType {
     case One
     case Two
     case Three
@@ -21,8 +21,8 @@ protocol FrinedVMInterFace {
     var userPublisher: Published<User>.Publisher { get }
     
     // Friend
-    func getFriendList(type: getFriendListType)
-    var friendListPublisher: Published<[Friend]>.Publisher { get }
+    func getFriendList(type: GetFriendListType)
+    var friendListPublisher: Published<([Friend], GetFriendListType)>.Publisher { get }
 }
 
 class FrinedVM: FrinedVMInterFace {
@@ -30,8 +30,8 @@ class FrinedVM: FrinedVMInterFace {
     @Published private var _user: User = User.defaultUser
     var userPublisher: Published<User>.Publisher { $_user }
     // Friend
-    @Published private var _friendList: [Friend] = []
-    var friendListPublisher: Published<[Friend]>.Publisher { $_friendList }
+    @Published private var _friendList: ([Friend], GetFriendListType) = ([], .One)
+    var friendListPublisher: Published<([Friend], GetFriendListType)>.Publisher { $_friendList }
     
     private let userRepository: UserRepositoryInterFace
     private let friendRepository: FriendsRepositoryInterFace
@@ -62,7 +62,7 @@ class FrinedVM: FrinedVMInterFace {
             .store(in: &cancellable)
     }
     
-    func getFriendList(type: getFriendListType) {
+    func getFriendList(type: GetFriendListType) {
         _getFriendListSwitch(type: type)
             .sink { completion in
                 switch completion {
@@ -73,19 +73,18 @@ class FrinedVM: FrinedVMInterFace {
                     break
                 }
             } receiveValue: { data in
-                self._friendList = data
+                self._friendList = (data, type)
             }
             .store(in: &cancellable)
     }
     
-    func _getFriendListSwitch(type: getFriendListType) -> AnyPublisher<[Friend], Error> {
+    func _getFriendListSwitch(type: GetFriendListType) -> AnyPublisher<[Friend], Error> {
         switch type {
-        case .One:
-            return friendRepository.getFriendList1()
-        case .Two, .Three:
-            return Publishers.CombineLatest(friendRepository.getFriendList2(), friendRepository.getFriendList3())
-                .map { (data2, data3) in
-                    var mergedFriends = data2 + data3
+            // 這邊呼叫的情境沒有下拉刷新的使用者體驗所以不加延遲
+        case .One, .Two:
+            return Publishers.CombineLatest(friendRepository.getFriendList1(), friendRepository.getFriendList2())
+                .map { (data1, data2) in
+                    let mergedFriends = data1 + data2
                     var filteredFriends: [String: Friend] = [:]
                     for friend in mergedFriends {
                         if let existingFriend = filteredFriends[friend.fid] {
@@ -93,19 +92,23 @@ class FrinedVM: FrinedVMInterFace {
                             let currentUpdateDate = friend.updateDate
                             
                             if Int(existingUpdateDate) ?? 0 < Int(currentUpdateDate) ?? 0 {
-                                // 如果現在的updateDate較新，則取代原本的資料
                                 filteredFriends[friend.fid] = friend
                             }
                         } else {
-                            // 如果fid沒有重複，則直接加入到filteredFriends中
                             filteredFriends[friend.fid] = friend
                         }
                     }
                     return Array(filteredFriends.values)
                 }
                 .eraseToAnyPublisher()
+        case .Three:
+            return friendRepository.getFriendList3()
+                .delay(for: 1, scheduler: DispatchQueue.global())
+                .eraseToAnyPublisher()
         case .Four:
             return friendRepository.getFriendList4()
+                .delay(for: 1, scheduler: DispatchQueue.global())
+                .eraseToAnyPublisher()
         }
     }
 }
