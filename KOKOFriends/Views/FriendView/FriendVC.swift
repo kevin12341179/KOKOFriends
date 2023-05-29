@@ -50,6 +50,16 @@ class FriendVC: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink {[weak self] (data, type) in
                 self?.frinedContentView.setData(friendData: data, getFriendListType: type)
+                let invitaeList = data.filter { f in
+                    return f.status == 0
+                }
+                if invitaeList.isEmpty {
+                    self?.addFriendView.isHidden = true
+                } else {
+                    self?.addFriendView.isHidden = false
+                    self?.addFriendViewHeight.constant = 130
+                    self?.addFriendView.setData(data: invitaeList)
+                }
             }
             .store(in: &cancellable)
         viewModel.getFriendList(type: .Four)
@@ -57,6 +67,10 @@ class FriendVC: UIViewController {
 }
 
 extension FriendVC: FriendContentDelegate {
+    func getCompontHeight() -> CGFloat {
+        return (self.addFriendView.isHidden ? 0 : self.addFriendViewHeight.constant) + self.userView.bounds.height
+    }
+    
     func getFriendList(type: GetFriendListType) {
         self.viewModel.getFriendList(type: type)
     }

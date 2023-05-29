@@ -9,6 +9,7 @@ import UIKit
 
 protocol FriendContentDelegate: AnyObject {
     func getFriendList(type: GetFriendListType)
+    func getCompontHeight() -> CGFloat
 }
 
 enum FriendContent: String{
@@ -111,6 +112,10 @@ extension FriendContentView: UICollectionViewDelegate, UICollectionViewDataSourc
 }
 
 extension FriendContentView: FriendTableViewDelegate{
+    func getCompontHeight() -> CGFloat {
+        return (self.delegate?.getCompontHeight() ?? 0) + collectionView.bounds.height + 1 // Line
+    }
+    
     func getFriendList(type: GetFriendListType) {
         self.delegate?.getFriendList(type: type)
     }

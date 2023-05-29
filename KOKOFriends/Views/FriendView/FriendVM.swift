@@ -89,7 +89,7 @@ class FrinedVM: FrinedVMInterFace {
                     for friend in mergedFriends {
                         if let existingFriend = filteredFriends[friend.fid] {
                             let existingUpdateDate = existingFriend.updateDate.split(separator: "/").reduce("", {String($0) + String($1)})
-                            let currentUpdateDate = friend.updateDate
+                            let currentUpdateDate = friend.updateDate.split(separator: "/").reduce("", {String($0) + String($1)})
                             
                             if Int(existingUpdateDate) ?? 0 < Int(currentUpdateDate) ?? 0 {
                                 filteredFriends[friend.fid] = friend

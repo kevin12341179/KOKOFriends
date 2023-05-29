@@ -9,6 +9,7 @@ import UIKit
 
 protocol FriendTableViewDelegate: AnyObject {
     func getFriendList(type: GetFriendListType)
+    func getCompontHeight() -> CGFloat
 }
 
 protocol FriendTableViewInterFace {
@@ -24,6 +25,7 @@ class FriendTableView: UIView, NibOwnerLoadable{
     
     var getFriendListType: GetFriendListType = .Four
     var refreshControl: UIRefreshControl = UIRefreshControl()
+    var maskBG: UIView?
     var tableviewData: [Friend] = []
     var showData: [Friend] = []
     
@@ -90,15 +92,24 @@ extension FriendTableView: UITableViewDelegate, UITableViewDataSource{
 
 extension FriendTableView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        maskBG = UIView.init(frame: CGRect(x: 0, y: self.bounds.height, width: self.bounds.width, height: 500))
+        maskBG?.backgroundColor = .white
+        self.addSubview(maskBG!)
         UIView.animate(withDuration: 0.3, animations: {
-            self.frame.origin.y = self.frame.origin.y - 150
+            self.frame.origin.y = self.frame.origin.y - (self.delegate?.getCompontHeight() ?? 0)
         })
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         UIView.animate(withDuration: 0.3, animations: {
-            self.frame.origin.y = self.frame.origin.y + 150
-        })
+            self.frame.origin.y = self.frame.origin.y + (self.delegate?.getCompontHeight() ?? 0)
+        }) { [weak self] _ in
+            if let mv = self?.maskBG {
+                mv.removeFromSuperview()
+                self?.maskBG = nil
+            }
+        }
         textField.resignFirstResponder()
         return true
     }

@@ -16,6 +16,7 @@ class AddFriendView: UIView, NibOwnerLoadable {
     
     weak var delegate: AddFriendViewDelegate?
     var isExpand: Bool = false
+    var friendData: [Friend] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +33,11 @@ class AddFriendView: UIView, NibOwnerLoadable {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    func setData(data: [Friend]) {
+        self.isExpand = false
+        self.tableView.reloadData()
     }
     
     func _clickHeaderOrCell(){
@@ -59,7 +65,7 @@ extension AddFriendView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isExpand ? 5 : 0
+        return isExpand ? 5 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
