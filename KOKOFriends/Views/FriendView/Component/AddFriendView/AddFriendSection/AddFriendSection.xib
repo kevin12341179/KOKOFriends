@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +19,7 @@
                     <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiX-xn-gss" userLabel="CardBG">
-                    <rect key="frame" x="40" y="20" width="334" height="95"/>
+                    <rect key="frame" x="40" y="45" width="334" height="70"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultCornerRadius">
@@ -36,8 +37,88 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-GO-Ley" userLabel="CardView">
-                    <rect key="frame" x="30" y="5" width="354" height="100"/>
+                    <rect key="frame" x="30" y="35" width="354" height="70"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUc-93-men">
+                            <rect key="frame" x="70" y="15" width="189" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpW-zu-9Hl">
+                                    <rect key="frame" x="0.0" y="0.0" width="189" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="9HQ-YY-y0O"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀請你成為好友：）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om6-Dw-D3a">
+                                    <rect key="frame" x="0.0" y="22" width="189" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Om6-Dw-D3a" firstAttribute="leading" secondItem="DUc-93-men" secondAttribute="leading" id="EOX-9a-D7I"/>
+                                <constraint firstItem="Om6-Dw-D3a" firstAttribute="top" secondItem="vpW-zu-9Hl" secondAttribute="bottom" id="NuX-1T-hGl"/>
+                                <constraint firstAttribute="height" constant="40" id="OFz-Cy-poB"/>
+                                <constraint firstAttribute="bottom" secondItem="Om6-Dw-D3a" secondAttribute="bottom" id="XkB-5o-TtD"/>
+                                <constraint firstAttribute="trailing" secondItem="Om6-Dw-D3a" secondAttribute="trailing" id="fdC-EK-QI8"/>
+                                <constraint firstAttribute="trailing" secondItem="vpW-zu-9Hl" secondAttribute="trailing" id="j0W-Bc-jvc"/>
+                                <constraint firstItem="vpW-zu-9Hl" firstAttribute="top" secondItem="DUc-93-men" secondAttribute="top" id="kpQ-e9-yJC"/>
+                                <constraint firstItem="vpW-zu-9Hl" firstAttribute="leading" secondItem="DUc-93-men" secondAttribute="leading" id="sQB-9F-auG"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsList" translatesAutoresizingMaskIntoConstraints="NO" id="0nq-al-1WJ">
+                            <rect key="frame" x="15" y="15" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="XOo-4I-0JC"/>
+                                <constraint firstAttribute="height" constant="40" id="drV-MV-18q"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l21-PU-5Nw">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="70"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="headerClick:" destination="dII-Wf-T4d" eventType="touchUpInside" id="CBl-r1-hAK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-C1-4oI">
+                            <rect key="frame" x="309" y="20" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="6D4-1h-nY5"/>
+                                <constraint firstAttribute="height" constant="30" id="zJ9-nC-6IV"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="btnFriendsDelet"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-hG-cxG">
+                            <rect key="frame" x="264" y="20" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="8m4-xE-8wm"/>
+                                <constraint firstAttribute="width" constant="30" id="w3N-ha-xgs"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="btnFriendsAgree"/>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="l21-PU-5Nw" secondAttribute="trailing" id="712-nu-tGB"/>
+                        <constraint firstItem="0nq-al-1WJ" firstAttribute="centerY" secondItem="cPP-GO-Ley" secondAttribute="centerY" id="GUY-oZ-JHP"/>
+                        <constraint firstItem="hOi-C1-4oI" firstAttribute="centerY" secondItem="0nq-al-1WJ" secondAttribute="centerY" id="IIp-f3-xhJ"/>
+                        <constraint firstItem="DUc-93-men" firstAttribute="leading" secondItem="0nq-al-1WJ" secondAttribute="trailing" constant="15" id="NKX-tU-nkE"/>
+                        <constraint firstItem="DX3-hG-cxG" firstAttribute="leading" secondItem="DUc-93-men" secondAttribute="trailing" constant="5" id="SkY-FY-oSv"/>
+                        <constraint firstAttribute="bottom" secondItem="l21-PU-5Nw" secondAttribute="bottom" id="a0l-8Q-9sr"/>
+                        <constraint firstAttribute="trailing" secondItem="hOi-C1-4oI" secondAttribute="trailing" constant="15" id="gyj-ca-cw9"/>
+                        <constraint firstItem="DUc-93-men" firstAttribute="centerY" secondItem="0nq-al-1WJ" secondAttribute="centerY" id="kym-iu-udQ"/>
+                        <constraint firstItem="l21-PU-5Nw" firstAttribute="leading" secondItem="cPP-GO-Ley" secondAttribute="leading" id="lCk-Ot-g6P"/>
+                        <constraint firstItem="0nq-al-1WJ" firstAttribute="leading" secondItem="cPP-GO-Ley" secondAttribute="leading" constant="15" id="oV3-gY-rcW"/>
+                        <constraint firstItem="l21-PU-5Nw" firstAttribute="top" secondItem="cPP-GO-Ley" secondAttribute="top" id="xfw-JW-ipm"/>
+                        <constraint firstItem="DX3-hG-cxG" firstAttribute="centerY" secondItem="0nq-al-1WJ" secondAttribute="centerY" id="y3l-Ei-V7A"/>
+                        <constraint firstItem="hOi-C1-4oI" firstAttribute="leading" secondItem="DX3-hG-cxG" secondAttribute="trailing" constant="15" id="yZh-JH-Voj"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultCornerRadius">
                             <real key="value" value="6"/>
@@ -53,37 +134,35 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l21-PU-5Nw">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <connections>
-                        <action selector="headerClick:" destination="dII-Wf-T4d" eventType="touchUpInside" id="CBl-r1-hAK"/>
-                    </connections>
-                </button>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="l21-PU-5Nw" secondAttribute="bottom" id="3z4-Fm-2OQ"/>
                 <constraint firstAttribute="bottom" secondItem="jiX-xn-gss" secondAttribute="bottom" constant="15" id="Fih-cY-Nnm"/>
-                <constraint firstAttribute="trailing" secondItem="l21-PU-5Nw" secondAttribute="trailing" id="HIt-zn-hLV"/>
-                <constraint firstItem="l21-PU-5Nw" firstAttribute="top" secondItem="dII-Wf-T4d" secondAttribute="top" id="Iyf-aC-mv6"/>
                 <constraint firstItem="jiX-xn-gss" firstAttribute="leading" secondItem="dII-Wf-T4d" secondAttribute="leading" constant="40" id="KDq-7n-g9f"/>
                 <constraint firstAttribute="bottom" secondItem="cPP-GO-Ley" secondAttribute="bottom" constant="25" id="NLg-NO-Edg"/>
                 <constraint firstAttribute="trailing" secondItem="jiX-xn-gss" secondAttribute="trailing" constant="40" id="POY-bp-lmN"/>
                 <constraint firstAttribute="bottom" secondItem="bhv-2m-gGf" secondAttribute="bottom" id="Pm7-DY-eWI"/>
-                <constraint firstItem="cPP-GO-Ley" firstAttribute="top" secondItem="dII-Wf-T4d" secondAttribute="top" constant="5" id="W1Y-iZ-3Qd"/>
+                <constraint firstItem="cPP-GO-Ley" firstAttribute="top" secondItem="dII-Wf-T4d" secondAttribute="top" constant="35" id="W1Y-iZ-3Qd"/>
                 <constraint firstItem="bhv-2m-gGf" firstAttribute="leading" secondItem="dII-Wf-T4d" secondAttribute="leading" id="e9D-kn-oS2"/>
                 <constraint firstAttribute="trailing" secondItem="bhv-2m-gGf" secondAttribute="trailing" id="iCI-Ov-atR"/>
                 <constraint firstAttribute="trailing" secondItem="cPP-GO-Ley" secondAttribute="trailing" constant="30" id="o7C-EV-Qua"/>
-                <constraint firstItem="jiX-xn-gss" firstAttribute="top" secondItem="dII-Wf-T4d" secondAttribute="top" constant="20" id="pZU-nz-vQS"/>
-                <constraint firstItem="l21-PU-5Nw" firstAttribute="leading" secondItem="dII-Wf-T4d" secondAttribute="leading" id="qaj-kH-SRT"/>
+                <constraint firstItem="jiX-xn-gss" firstAttribute="top" secondItem="dII-Wf-T4d" secondAttribute="top" constant="45" id="pZU-nz-vQS"/>
                 <constraint firstItem="bhv-2m-gGf" firstAttribute="top" secondItem="dII-Wf-T4d" secondAttribute="top" id="unS-tb-lJh"/>
                 <constraint firstItem="cPP-GO-Ley" firstAttribute="leading" secondItem="dII-Wf-T4d" secondAttribute="leading" constant="30" id="vfr-de-WT5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="cardView" destination="cPP-GO-Ley" id="i7G-Ks-1ZH"/>
+                <outlet property="userName" destination="vpW-zu-9Hl" id="0Ie-5x-Ey5"/>
             </connections>
-            <point key="canvasLocation" x="231.8840579710145" y="141.96428571428569"/>
+            <point key="canvasLocation" x="231.8840579710145" y="141.29464285714286"/>
         </view>
     </objects>
+    <resources>
+        <image name="btnFriendsAgree" width="30" height="30"/>
+        <image name="btnFriendsDelet" width="30" height="30"/>
+        <image name="imgFriendsList" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

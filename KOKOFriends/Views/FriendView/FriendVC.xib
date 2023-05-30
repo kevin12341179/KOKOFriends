@@ -14,6 +14,7 @@
                 <outlet property="addFriendView" destination="Ynz-ir-tLq" id="7Vt-yG-iLo"/>
                 <outlet property="addFriendViewHeight" destination="Dia-hH-zZm" id="hJu-ac-oKz"/>
                 <outlet property="frinedContentView" destination="CFA-y3-MtD" id="eY7-li-3Uh"/>
+                <outlet property="spaceView" destination="xty-AH-shS" id="vy8-mx-a7c"/>
                 <outlet property="userView" destination="z6W-Wr-ZAj" id="rGD-f2-YW7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,21 +28,28 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6W-Wr-ZAj" customClass="UserView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="114" id="r5B-o4-4vf"/>
+                                <constraint firstAttribute="height" constant="55" id="r5B-o4-4vf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xty-AH-shS">
+                            <rect key="frame" x="0.0" y="55" width="414" height="30"/>
+                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="JIL-hm-IiF"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynz-ir-tLq" customClass="AddFriendView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="114" width="414" height="130"/>
+                            <rect key="frame" x="0.0" y="85" width="414" height="130"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="130" id="Dia-hH-zZm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-y3-MtD" customClass="FriendContentView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="244" width="414" height="574"/>
+                            <rect key="frame" x="0.0" y="215" width="414" height="603"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>

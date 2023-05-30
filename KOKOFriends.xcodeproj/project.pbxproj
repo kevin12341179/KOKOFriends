@@ -29,6 +29,8 @@
 		716D43592A248B380091E00C /* AddFriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716D43582A248B380091E00C /* AddFriendView.xib */; };
 		716D435C2A2497B10091E00C /* AddFriendSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716D435B2A2497B10091E00C /* AddFriendSection.xib */; };
 		716D435E2A2498260091E00C /* AddFriendSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D435D2A2498250091E00C /* AddFriendSection.swift */; };
+		719831132A25D2D000FB19C2 /* AddFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719831112A25D2D000FB19C2 /* AddFriendCell.swift */; };
+		719831142A25D2D000FB19C2 /* AddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719831122A25D2D000FB19C2 /* AddFriendCell.xib */; };
 		71CC7B0F2A209FC900662005 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC7B0E2A209FC900662005 /* GradientView.swift */; };
 		71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E42A1F492C0001AD72 /* AppDelegate.swift */; };
 		71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DC83E62A1F492C0001AD72 /* SceneDelegate.swift */; };
@@ -90,6 +92,8 @@
 		716D43582A248B380091E00C /* AddFriendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendView.xib; sourceTree = "<group>"; };
 		716D435B2A2497B10091E00C /* AddFriendSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendSection.xib; sourceTree = "<group>"; };
 		716D435D2A2498250091E00C /* AddFriendSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendSection.swift; sourceTree = "<group>"; };
+		719831112A25D2D000FB19C2 /* AddFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendCell.swift; sourceTree = "<group>"; };
+		719831122A25D2D000FB19C2 /* AddFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendCell.xib; sourceTree = "<group>"; };
 		71CC7B0E2A209FC900662005 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		71DC83E12A1F492C0001AD72 /* KOKOFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOKOFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DC83E42A1F492C0001AD72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		716D43542A248B020091E00C /* AddFriendView */ = {
 			isa = PBXGroup;
 			children = (
+				719831102A25D2B100FB19C2 /* AddFriendCell */,
 				716D435A2A24978C0091E00C /* AddFriendSection */,
 				716D43562A248B2F0091E00C /* AddFriendView.swift */,
 				716D43582A248B380091E00C /* AddFriendView.xib */,
@@ -246,6 +251,15 @@
 				716D435B2A2497B10091E00C /* AddFriendSection.xib */,
 			);
 			path = AddFriendSection;
+			sourceTree = "<group>";
+		};
+		719831102A25D2B100FB19C2 /* AddFriendCell */ = {
+			isa = PBXGroup;
+			children = (
+				719831112A25D2D000FB19C2 /* AddFriendCell.swift */,
+				719831122A25D2D000FB19C2 /* AddFriendCell.xib */,
+			);
+			path = AddFriendCell;
 			sourceTree = "<group>";
 		};
 		71CC7B0D2A209FBB00662005 /* Base */ = {
@@ -450,6 +464,7 @@
 				712DE7C72A20869B0084B03B /* FriendContentView.xib in Resources */,
 				71DC83F12A1F492F0001AD72 /* LaunchScreen.storyboard in Resources */,
 				71DC83EE2A1F492F0001AD72 /* Assets.xcassets in Resources */,
+				719831142A25D2D000FB19C2 /* AddFriendCell.xib in Resources */,
 				712DE7A82A204CE60084B03B /* FriendVC.xib in Resources */,
 				712DE7CC2A2089090084B03B /* FrinedContentCell.xib in Resources */,
 				71DC83EC2A1F492C0001AD72 /* Main.storyboard in Resources */,
@@ -497,6 +512,7 @@
 				712DE7BD2A205A980084B03B /* User.swift in Sources */,
 				712DE7B72A2056980084B03B /* APIInfo.swift in Sources */,
 				852A31252A1F90190080ADA2 /* NavigationController.swift in Sources */,
+				719831132A25D2D000FB19C2 /* AddFriendCell.swift in Sources */,
 				852A31282A1F96DD0080ADA2 /* EX+TabBarController.swift in Sources */,
 				852A312D2A23431C0080ADA2 /* FriendTableView.swift in Sources */,
 				852A31332A2346090080ADA2 /* FriendTableViewCell.swift in Sources */,

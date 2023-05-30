@@ -30,7 +30,10 @@ class AddFriendView: UIView, NibOwnerLoadable {
     
     func initView(){
         self.tableView.register(UINib(nibName: "AddFriendSection", bundle: nil), forHeaderFooterViewReuseIdentifier: "SectionView")
-        
+        self.tableView.register(UINib(nibName: "AddFriendCell", bundle: nil), forCellReuseIdentifier: "cell")
+        if #available(iOS 15.0, *) {
+            self.tableView.sectionHeaderTopPadding = 0
+        }
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -66,13 +69,22 @@ extension AddFriendView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isExpand ? 5 : 1
+        return isExpand ? self.friendData.count + 1 : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row != 0, let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? AddFriendCell {
+            cell.setData(data: self.friendData[indexPath.row - 1])
+            return cell
+        }
+        
         let cell = UITableViewCell()
-        cell.backgroundColor = .red
+        cell.backgroundColor = UIColor.rgbaColor(r: 252, g: 252, b: 252)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return isExpand ? indexPath.row == 0 ? 15 : 80 : 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

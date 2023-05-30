@@ -13,6 +13,7 @@ class FriendVC: UIViewController {
     @IBOutlet weak var userView: UserView!
     @IBOutlet weak var frinedContentView: FriendContentView!
     @IBOutlet weak var addFriendView: AddFriendView!
+    @IBOutlet weak var spaceView: UIView!
     @IBOutlet weak var addFriendViewHeight: NSLayoutConstraint!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -57,8 +58,10 @@ class FriendVC: UIViewController {
                 }
                 if invitaeList.isEmpty {
                     self?.addFriendView.isHidden = true
+                    self?.spaceView.isHidden = false
                 } else {
                     self?.addFriendView.isHidden = false
+                    self?.spaceView.isHidden = true
                     self?.addFriendViewHeight.constant = 130
                     self?.addFriendView.setData(data: invitaeList)
                 }

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddFriendCell" customModule="KOKOFriends" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-Zl-HtX" userLabel="CardView">
+                        <rect key="frame" x="30" y="10" width="294" height="60"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctA-ns-cB1">
+                                <rect key="frame" x="70" y="10" width="129" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfc-X6-kLb">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="cUj-a6-ZXf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀請你成為好友：）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4g-el-iic">
+                                        <rect key="frame" x="0.0" y="22" width="129" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="q4g-el-iic" secondAttribute="bottom" id="2jO-tU-vgR"/>
+                                    <constraint firstItem="Rfc-X6-kLb" firstAttribute="top" secondItem="ctA-ns-cB1" secondAttribute="top" id="4KS-39-UhE"/>
+                                    <constraint firstItem="q4g-el-iic" firstAttribute="leading" secondItem="ctA-ns-cB1" secondAttribute="leading" id="4bC-ym-QGC"/>
+                                    <constraint firstItem="q4g-el-iic" firstAttribute="top" secondItem="Rfc-X6-kLb" secondAttribute="bottom" id="7i0-JD-9ne"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rfc-X6-kLb" secondAttribute="trailing" id="HEt-43-P0c"/>
+                                    <constraint firstItem="Rfc-X6-kLb" firstAttribute="leading" secondItem="ctA-ns-cB1" secondAttribute="leading" id="VL8-bi-B9f"/>
+                                    <constraint firstAttribute="trailing" secondItem="q4g-el-iic" secondAttribute="trailing" id="Vci-pg-rgs"/>
+                                    <constraint firstAttribute="height" constant="40" id="oDk-QG-x8k"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsList" translatesAutoresizingMaskIntoConstraints="NO" id="CBR-Ff-dGp">
+                                <rect key="frame" x="15" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jom-mH-Uxn"/>
+                                    <constraint firstAttribute="width" constant="40" id="KLK-T2-wdf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89z-tK-dPt">
+                                <rect key="frame" x="249" y="15" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="5bi-xi-yo6"/>
+                                    <constraint firstAttribute="height" constant="30" id="yYm-Q3-8GJ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="btnFriendsDelet"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9K-tf-0gT">
+                                <rect key="frame" x="204" y="15" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="E9Z-MA-ILu"/>
+                                    <constraint firstAttribute="height" constant="30" id="STK-tu-U3v"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="btnFriendsAgree"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="89z-tK-dPt" secondAttribute="trailing" constant="15" id="2GJ-nl-N0d"/>
+                            <constraint firstItem="m9K-tf-0gT" firstAttribute="leading" secondItem="ctA-ns-cB1" secondAttribute="trailing" constant="5" id="3kJ-eG-07j"/>
+                            <constraint firstItem="m9K-tf-0gT" firstAttribute="centerY" secondItem="CBR-Ff-dGp" secondAttribute="centerY" id="7E2-jY-pLr"/>
+                            <constraint firstItem="CBR-Ff-dGp" firstAttribute="leading" secondItem="yXJ-Zl-HtX" secondAttribute="leading" constant="15" id="8lC-bo-L0n"/>
+                            <constraint firstItem="CBR-Ff-dGp" firstAttribute="centerY" secondItem="yXJ-Zl-HtX" secondAttribute="centerY" id="LL3-Cu-d08"/>
+                            <constraint firstItem="89z-tK-dPt" firstAttribute="leading" secondItem="m9K-tf-0gT" secondAttribute="trailing" constant="15" id="PLc-4k-WMi"/>
+                            <constraint firstItem="89z-tK-dPt" firstAttribute="centerY" secondItem="CBR-Ff-dGp" secondAttribute="centerY" id="nyj-H7-UmT"/>
+                            <constraint firstItem="ctA-ns-cB1" firstAttribute="leading" secondItem="CBR-Ff-dGp" secondAttribute="trailing" constant="15" id="p1m-FV-hli"/>
+                            <constraint firstItem="ctA-ns-cB1" firstAttribute="centerY" secondItem="CBR-Ff-dGp" secondAttribute="centerY" id="uc0-uQ-DiV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="defaultCornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="yXJ-Zl-HtX" secondAttribute="bottom" constant="10" id="dIa-gm-QuX"/>
+                    <constraint firstAttribute="trailing" secondItem="yXJ-Zl-HtX" secondAttribute="trailing" constant="30" id="epO-GP-mEX"/>
+                    <constraint firstItem="yXJ-Zl-HtX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="kf8-La-FnM"/>
+                    <constraint firstItem="yXJ-Zl-HtX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oht-PN-p56"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="userName" destination="Rfc-X6-kLb" id="csO-R3-V0i"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="92"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="btnFriendsAgree" width="30" height="30"/>
+        <image name="btnFriendsDelet" width="30" height="30"/>
+        <image name="imgFriendsList" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
