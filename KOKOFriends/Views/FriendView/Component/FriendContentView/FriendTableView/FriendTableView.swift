@@ -88,6 +88,10 @@ extension FriendTableView: UITableViewDelegate, UITableViewDataSource{
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // cell touch
+    }
 }
 
 extension FriendTableView: UITextFieldDelegate {
@@ -98,10 +102,10 @@ extension FriendTableView: UITextFieldDelegate {
         UIView.animate(withDuration: 0.3, animations: {
             self.frame.origin.y = self.frame.origin.y - (self.delegate?.getCompontHeight() ?? 0)
         })
+        self.tableView.bounces = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         UIView.animate(withDuration: 0.3, animations: {
             self.frame.origin.y = self.frame.origin.y + (self.delegate?.getCompontHeight() ?? 0)
         }) { [weak self] _ in
@@ -110,6 +114,7 @@ extension FriendTableView: UITextFieldDelegate {
                 self?.maskBG = nil
             }
         }
+        self.tableView.bounces = true
         textField.resignFirstResponder()
         return true
     }
