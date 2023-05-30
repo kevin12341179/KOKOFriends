@@ -37,6 +37,7 @@ class AddFriendView: UIView, NibOwnerLoadable {
     
     func setData(data: [Friend]) {
         self.isExpand = false
+        self.friendData = data
         self.tableView.reloadData()
     }
     
@@ -53,8 +54,8 @@ extension AddFriendView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if let sectionView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionView") as? AddFriendSection {
-            sectionView.delegate = self
+        if let friendData = friendData.first, let sectionView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SectionView") as? AddFriendSection {
+            sectionView.setSectionData(delegate: self, data: friendData)
             return sectionView
         }
         return UIView()

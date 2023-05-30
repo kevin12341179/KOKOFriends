@@ -14,31 +14,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AddFriendSection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI9-um-Et9">
-                    <rect key="frame" x="139" y="437.5" width="136" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-GO-Ley" userLabel="CardView">
+                    <rect key="frame" x="30" y="45" width="354" height="792"/>
+                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                            <real key="value" value="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                            <size key="value" width="0.0" height="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l21-PU-5Nw">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <connections>
-                        <action selector="headerClick:" destination="-1" eventType="touchUpInside" id="adc-9c-riy"/>
+                        <action selector="headerClick:" destination="dII-Wf-T4d" eventType="touchUpInside" id="CBl-r1-hAK"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="taV-tm-ClG"/>
             <constraints>
                 <constraint firstItem="taV-tm-ClG" firstAttribute="bottom" secondItem="l21-PU-5Nw" secondAttribute="bottom" id="3z4-Fm-2OQ"/>
-                <constraint firstItem="bI9-um-Et9" firstAttribute="centerX" secondItem="dII-Wf-T4d" secondAttribute="centerX" id="DoP-gG-28V"/>
                 <constraint firstItem="taV-tm-ClG" firstAttribute="trailing" secondItem="l21-PU-5Nw" secondAttribute="trailing" id="HIt-zn-hLV"/>
                 <constraint firstItem="l21-PU-5Nw" firstAttribute="top" secondItem="taV-tm-ClG" secondAttribute="top" id="Iyf-aC-mv6"/>
+                <constraint firstItem="taV-tm-ClG" firstAttribute="bottom" secondItem="cPP-GO-Ley" secondAttribute="bottom" constant="25" id="NLg-NO-Edg"/>
+                <constraint firstItem="cPP-GO-Ley" firstAttribute="top" secondItem="taV-tm-ClG" secondAttribute="top" constant="1" id="W1Y-iZ-3Qd"/>
+                <constraint firstItem="taV-tm-ClG" firstAttribute="trailing" secondItem="cPP-GO-Ley" secondAttribute="trailing" constant="30" id="o7C-EV-Qua"/>
                 <constraint firstItem="l21-PU-5Nw" firstAttribute="leading" secondItem="taV-tm-ClG" secondAttribute="leading" id="qaj-kH-SRT"/>
-                <constraint firstItem="bI9-um-Et9" firstAttribute="centerY" secondItem="dII-Wf-T4d" secondAttribute="centerY" id="rTV-Jq-0Rz"/>
+                <constraint firstItem="cPP-GO-Ley" firstAttribute="leading" secondItem="taV-tm-ClG" secondAttribute="leading" constant="30" id="vfr-de-WT5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="231.8840579710145" y="142.63392857142856"/>
+            <connections>
+                <outlet property="cardView" destination="cPP-GO-Ley" id="i7G-Ks-1ZH"/>
+            </connections>
+            <point key="canvasLocation" x="231.8840579710145" y="141.96428571428569"/>
         </view>
     </objects>
 </document>

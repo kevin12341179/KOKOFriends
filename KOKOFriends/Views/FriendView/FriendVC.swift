@@ -49,7 +49,9 @@ class FriendVC: UIViewController {
         viewModel.friendListPublisher
             .receive(on: DispatchQueue.main)
             .sink {[weak self] (data, type) in
+                // 下方
                 self?.frinedContentView.setData(friendData: data, getFriendListType: type)
+                // 邀請
                 let invitaeList = data.filter { f in
                     return f.status == 0
                 }
