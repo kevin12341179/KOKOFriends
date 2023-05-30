@@ -162,7 +162,7 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                             <color key="value" red="0.65098039215686276" green="0.80000000000000004" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="clearCornerRadius">
                                                             <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>

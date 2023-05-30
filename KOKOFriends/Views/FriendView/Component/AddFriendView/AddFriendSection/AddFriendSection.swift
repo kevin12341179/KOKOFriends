@@ -17,7 +17,6 @@ class AddFriendSection: UITableViewHeaderFooterView {
     weak var delegate: AddFriendSectionDelegate?
     
     func setSectionData(delegate: AddFriendSectionDelegate, data: Friend){
-        self.backgroundColor = UIColor.rgbaColor(r: 252, g: 252, b: 252)
         self.delegate = delegate
     }
     
