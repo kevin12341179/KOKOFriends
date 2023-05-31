@@ -14,7 +14,7 @@ class TabBarController: UITabBarController {
         self.setBackgroundColor(.white)
         
         let viewController1 = UIViewController()
-        let viewController2 = FriendVC()
+        let viewController2 = FriendVC(viewModel: FrinedVM())
         let viewController3 = UIViewController()
         let viewController4 = UIViewController()
         let viewController5 = UIViewController()

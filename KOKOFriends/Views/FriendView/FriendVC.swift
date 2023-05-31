@@ -16,6 +16,11 @@ class FriendVC: UIViewController {
     @IBOutlet weak var spaceView: UIView!
     @IBOutlet weak var addFriendViewHeight: NSLayoutConstraint!
     
+    init(viewModel: FrinedVMInterFace) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "FriendVC", bundle: Bundle.main)
     }
@@ -25,7 +30,7 @@ class FriendVC: UIViewController {
     }
     
     // Base
-    var viewModel: FrinedVMInterFace = FrinedVM()
+    var viewModel: FrinedVMInterFace?
     var cancellable = Set<AnyCancellable>()
     
     override func viewDidLoad() {
@@ -39,15 +44,15 @@ class FriendVC: UIViewController {
     }
     
     func bindViewModel(){
-        viewModel.userPublisher
+        viewModel?.userPublisher
             .receive(on: DispatchQueue.main)
             .sink {[weak self] data in
                 self?.userView.setUser(user: data)
             }
             .store(in: &cancellable)
-        viewModel.getUser()
+        viewModel?.getUser()
         
-        viewModel.friendListPublisher
+        viewModel?.friendListPublisher
             .receive(on: DispatchQueue.main)
             .sink {[weak self] (data, type) in
                 // 下方
@@ -67,7 +72,7 @@ class FriendVC: UIViewController {
                 }
             }
             .store(in: &cancellable)
-        viewModel.getFriendList(type: .Four)
+        viewModel?.getFriendList(type: .Four)
     }
 }
 
@@ -77,7 +82,7 @@ extension FriendVC: FriendContentDelegate {
     }
     
     func getFriendList(type: GetFriendListType) {
-        self.viewModel.getFriendList(type: type)
+        self.viewModel?.getFriendList(type: type)
     }
 }
 
