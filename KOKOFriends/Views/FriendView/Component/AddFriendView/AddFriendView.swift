@@ -69,7 +69,7 @@ extension AddFriendView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isExpand ? self.friendData.count + 1 : 0
+        return isExpand ? self.friendData.count + 1 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

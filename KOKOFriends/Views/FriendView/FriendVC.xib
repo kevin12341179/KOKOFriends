@@ -27,29 +27,36 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljM-in-Ias">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-G8-YQK" userLabel="Space">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="26"/>
+                            <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="26" id="rdC-mq-V6c"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6W-Wr-ZAj" customClass="UserView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                            <rect key="frame" x="0.0" y="26" width="414" height="55"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="r5B-o4-4vf"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xty-AH-shS">
-                            <rect key="frame" x="0.0" y="55" width="414" height="30"/>
+                            <rect key="frame" x="0.0" y="81" width="414" height="30"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="JIL-hm-IiF"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynz-ir-tLq" customClass="AddFriendView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="85" width="414" height="130"/>
+                            <rect key="frame" x="0.0" y="111" width="414" height="130"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="130" id="Dia-hH-zZm"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-y3-MtD" customClass="FriendContentView" customModule="KOKOFriends" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="215" width="414" height="603"/>
+                            <rect key="frame" x="0.0" y="241" width="414" height="577"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
