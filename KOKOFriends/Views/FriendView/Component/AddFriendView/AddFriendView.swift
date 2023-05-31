@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddFriendViewDelegate: AnyObject {
-    func setExpand(isExpand: Bool)
+    func addFriendView(_ addFriendView: AddFriendView, setExpand: Bool)
 }
 
 class AddFriendView: UIView, NibOwnerLoadable {
@@ -46,7 +46,7 @@ class AddFriendView: UIView, NibOwnerLoadable {
     
     func _clickHeaderOrCell(){
         isExpand = !isExpand
-        delegate?.setExpand(isExpand: isExpand)
+        delegate?.addFriendView(self, setExpand: isExpand)
         self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
     }
 }
@@ -93,7 +93,7 @@ extension AddFriendView: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension AddFriendView: AddFriendSectionDelegate {
-    func headerClick() {
+    func AddFriendSectionHeaderClick(_ section: AddFriendSection) {
         _clickHeaderOrCell()
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AddFriendSectionDelegate: AnyObject {
-    func headerClick()
+    func AddFriendSectionHeaderClick(_ section: AddFriendSection)
 }
 
 class AddFriendSection: UITableViewHeaderFooterView {
@@ -23,6 +23,6 @@ class AddFriendSection: UITableViewHeaderFooterView {
     }
     
     @IBAction func headerClick(_ sender: Any) {
-        delegate?.headerClick()
+        delegate?.AddFriendSectionHeaderClick(self)
     }
 }

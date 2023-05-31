@@ -8,8 +8,8 @@
 import UIKit
 
 protocol FriendContentDelegate: AnyObject {
-    func getFriendList(type: GetFriendListType)
-    func getCompontHeight() -> CGFloat
+    func friendContent(_ friendContentView: FriendContentView, getFriendList type: GetFriendListType)
+    func friendContentGetCompontHeight() -> CGFloat
 }
 
 enum FriendContent: String{
@@ -64,7 +64,7 @@ class FriendContentView: UIView, NibOwnerLoadable {
     }
     
     @IBAction func addFriendClick(_ sender: Any) {
-        self.delegate?.getFriendList(type: .One)
+        self.delegate?.friendContent(self, getFriendList: .One)
     }
 }
 
@@ -116,11 +116,11 @@ extension FriendContentView: UICollectionViewDelegate, UICollectionViewDataSourc
 }
 
 extension FriendContentView: FriendTableViewDelegate{
-    func getCompontHeight() -> CGFloat {
-        return (self.delegate?.getCompontHeight() ?? 0) + collectionView.bounds.height + 1 // Line
+    func friendTableView(_ friendTableView: FriendTableView, getFriendList type: GetFriendListType) {
+        self.delegate?.friendContent(self, getFriendList: type)
     }
     
-    func getFriendList(type: GetFriendListType) {
-        self.delegate?.getFriendList(type: type)
+    func friendTableViewGetCompontHeight(_ friendTableView: FriendTableView) -> CGFloat {
+        return (self.delegate?.friendContentGetCompontHeight() ?? 0) + collectionView.bounds.height + 1 // Line
     }
 }

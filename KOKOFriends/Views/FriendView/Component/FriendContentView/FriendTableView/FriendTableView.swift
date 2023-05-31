@@ -8,8 +8,8 @@
 import UIKit
 
 protocol FriendTableViewDelegate: AnyObject {
-    func getFriendList(type: GetFriendListType)
-    func getCompontHeight() -> CGFloat
+    func friendTableView(_ friendTableView: FriendTableView, getFriendList type: GetFriendListType)
+    func friendTableViewGetCompontHeight(_ friendTableView: FriendTableView) -> CGFloat
 }
 
 protocol FriendTableViewInterFace {
@@ -54,11 +54,11 @@ class FriendTableView: UIView, NibOwnerLoadable{
     @objc func onRefresh() {
         switch getFriendListType {
         case .One, .Two:
-            self.delegate?.getFriendList(type: .Three)
+            self.delegate?.friendTableView(self, getFriendList: .Three)
         case .Three:
-            self.delegate?.getFriendList(type: .Four)
+            self.delegate?.friendTableView(self, getFriendList: .Four)
         case .Four:
-            self.delegate?.getFriendList(type: .One)
+            self.delegate?.friendTableView(self, getFriendList: .One)
         }
     }
 }
@@ -100,14 +100,14 @@ extension FriendTableView: UITextFieldDelegate {
         maskBG?.backgroundColor = .white
         self.addSubview(maskBG!)
         UIView.animate(withDuration: 0.3, animations: {
-            self.frame.origin.y = self.frame.origin.y - (self.delegate?.getCompontHeight() ?? 0)
+            self.frame.origin.y = self.frame.origin.y - (self.delegate?.friendTableViewGetCompontHeight(self) ?? 0)
         })
         self.tableView.bounces = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         UIView.animate(withDuration: 0.3, animations: {
-            self.frame.origin.y = self.frame.origin.y + (self.delegate?.getCompontHeight() ?? 0)
+            self.frame.origin.y = self.frame.origin.y + (self.delegate?.friendTableViewGetCompontHeight(self) ?? 0)
         }) { [weak self] _ in
             if let mv = self?.maskBG {
                 mv.removeFromSuperview()
