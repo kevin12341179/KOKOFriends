@@ -21,6 +21,10 @@ class APIManager {
             return Fail(error: ErrorType.UrlError).eraseToAnyPublisher()
         }
         
+        if let _ = NSClassFromString("XCTestCase") {
+            return MockManger.shared.requestMockAPI(urlstring: urlstring)
+        }
+        
         return URLSession.shared.dataTaskPublisher(for: url)
             .map({$0.data})
             .decode(type: APIResponse<T>.self, decoder: JSONDecoder())

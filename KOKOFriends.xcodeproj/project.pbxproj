@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7128B1272A26F4B50078038D /* EX+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128B1262A26F4B50078038D /* EX+Array.swift */; };
+		7128B2512A27220F0078038D /* MockUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7128B1292A2716CB0078038D /* MockUser.json */; };
+		7128B2522A27220F0078038D /* MockUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7128B1292A2716CB0078038D /* MockUser.json */; };
+		7128B2542A2722840078038D /* MockManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128B2532A2722840078038D /* MockManger.swift */; };
+		7128B25A2A2724970078038D /* MockFriendList.json in Resources */ = {isa = PBXBuildFile; fileRef = 7128B2582A27245B0078038D /* MockFriendList.json */; };
+		7128B25B2A2724970078038D /* MockFriendList.json in Resources */ = {isa = PBXBuildFile; fileRef = 7128B2582A27245B0078038D /* MockFriendList.json */; };
+		7128B25C2A2727170078038D /* MockUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7128B1292A2716CB0078038D /* MockUser.json */; };
+		7128B25D2A2727190078038D /* MockFriendList.json in Resources */ = {isa = PBXBuildFile; fileRef = 7128B2582A27245B0078038D /* MockFriendList.json */; };
 		712DE7A12A2047940084B03B /* EX+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7A02A2047940084B03B /* EX+Color.swift */; };
 		712DE7A72A204CE60084B03B /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7A52A204CE60084B03B /* FriendVC.swift */; };
 		712DE7A82A204CE60084B03B /* FriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712DE7A62A204CE60084B03B /* FriendVC.xib */; };
@@ -72,6 +79,9 @@
 
 /* Begin PBXFileReference section */
 		7128B1262A26F4B50078038D /* EX+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+Array.swift"; sourceTree = "<group>"; };
+		7128B1292A2716CB0078038D /* MockUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockUser.json; sourceTree = "<group>"; };
+		7128B2532A2722840078038D /* MockManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockManger.swift; sourceTree = "<group>"; };
+		7128B2582A27245B0078038D /* MockFriendList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockFriendList.json; sourceTree = "<group>"; };
 		712DE7A02A2047940084B03B /* EX+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+Color.swift"; sourceTree = "<group>"; };
 		712DE7A52A204CE60084B03B /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
 		712DE7A62A204CE60084B03B /* FriendVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendVC.xib; sourceTree = "<group>"; };
@@ -146,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7128B1282A2716A70078038D /* MockResponse */ = {
+			isa = PBXGroup;
+			children = (
+				7128B1292A2716CB0078038D /* MockUser.json */,
+				7128B2582A27245B0078038D /* MockFriendList.json */,
+			);
+			path = MockResponse;
+			sourceTree = "<group>";
+		};
 		712DE7A22A204C670084B03B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,10 +198,12 @@
 		712DE7AF2A2055440084B03B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7128B1282A2716A70078038D /* MockResponse */,
 				712DE7B12A2055B70084B03B /* Response */,
 				712DE7B02A2055AB0084B03B /* Repository */,
 				712DE7B42A2056200084B03B /* APIManager.swift */,
 				712DE7B62A2056980084B03B /* APIInfo.swift */,
+				7128B2532A2722840078038D /* MockManger.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,7 +494,9 @@
 				71DC83EC2A1F492C0001AD72 /* Main.storyboard in Resources */,
 				716D43592A248B380091E00C /* AddFriendView.xib in Resources */,
 				712DE7AC2A204E600084B03B /* UserView.xib in Resources */,
+				7128B25C2A2727170078038D /* MockUser.json in Resources */,
 				852A31342A2346090080ADA2 /* FriendTableViewCell.xib in Resources */,
+				7128B25D2A2727190078038D /* MockFriendList.json in Resources */,
 				716D435C2A2497B10091E00C /* AddFriendSection.xib in Resources */,
 				852A312F2A2343360080ADA2 /* FriendTableView.xib in Resources */,
 			);
@@ -483,6 +506,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7128B2512A27220F0078038D /* MockUser.json in Resources */,
+				7128B25A2A2724970078038D /* MockFriendList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +515,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7128B2522A27220F0078038D /* MockUser.json in Resources */,
+				7128B25B2A2724970078038D /* MockFriendList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +556,7 @@
 				7128B1272A26F4B50078038D /* EX+Array.swift in Sources */,
 				716D43572A248B2F0091E00C /* AddFriendView.swift in Sources */,
 				71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */,
+				7128B2542A2722840078038D /* MockManger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
