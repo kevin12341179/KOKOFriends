@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7128B1272A26F4B50078038D /* EX+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7128B1262A26F4B50078038D /* EX+Array.swift */; };
 		712DE7A12A2047940084B03B /* EX+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7A02A2047940084B03B /* EX+Color.swift */; };
 		712DE7A72A204CE60084B03B /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712DE7A52A204CE60084B03B /* FriendVC.swift */; };
 		712DE7A82A204CE60084B03B /* FriendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712DE7A62A204CE60084B03B /* FriendVC.xib */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7128B1262A26F4B50078038D /* EX+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+Array.swift"; sourceTree = "<group>"; };
 		712DE7A02A2047940084B03B /* EX+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EX+Color.swift"; sourceTree = "<group>"; };
 		712DE7A52A204CE60084B03B /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
 		712DE7A62A204CE60084B03B /* FriendVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendVC.xib; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				712DE7A02A2047940084B03B /* EX+Color.swift */,
 				712DE7AD2A204E8A0084B03B /* NibLoadable.swift */,
 				852A31352A23485B0080ADA2 /* EX+UIView.swift */,
+				7128B1262A26F4B50078038D /* EX+Array.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				712DE7C52A2080560084B03B /* FriendContentView.swift in Sources */,
 				712DE7BF2A205AE20084B03B /* Friend.swift in Sources */,
 				71DC83E52A1F492C0001AD72 /* AppDelegate.swift in Sources */,
+				7128B1272A26F4B50078038D /* EX+Array.swift in Sources */,
 				716D43572A248B2F0091E00C /* AddFriendView.swift in Sources */,
 				71DC83E72A1F492C0001AD72 /* SceneDelegate.swift in Sources */,
 			);

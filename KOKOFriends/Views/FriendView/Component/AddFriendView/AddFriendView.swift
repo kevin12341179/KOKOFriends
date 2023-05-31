@@ -84,7 +84,7 @@ extension AddFriendView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return isExpand ? indexPath.row == 0 ? 15 : 80 : 0
+        return isExpand ? indexPath.row == 0 ? 15 : 90 : 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

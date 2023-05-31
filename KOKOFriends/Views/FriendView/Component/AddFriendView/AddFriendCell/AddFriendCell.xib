@@ -106,6 +106,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="yXJ-Zl-HtX" secondAttribute="bottom" constant="10" id="dIa-gm-QuX"/>
                     <constraint firstAttribute="trailing" secondItem="yXJ-Zl-HtX" secondAttribute="trailing" constant="30" id="epO-GP-mEX"/>
