@@ -78,7 +78,7 @@ class FriendVC: UIViewController {
 
 extension FriendVC: FriendContentDelegate {
     func getCompontHeight() -> CGFloat {
-        return (self.addFriendView.isHidden ? 0 : self.addFriendViewHeight.constant) + self.userView.bounds.height
+        return (self.addFriendView.isHidden ? self.spaceView.bounds.height : self.addFriendViewHeight.constant) + self.userView.bounds.height + 26 // space
     }
     
     func getFriendList(type: GetFriendListType) {
